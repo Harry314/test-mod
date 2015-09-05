@@ -1,0 +1,21 @@
+[
+{
+  "modid": "testMod",
+  "name": "testMod",
+  "description": "A mod to try coding",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "harry314"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
