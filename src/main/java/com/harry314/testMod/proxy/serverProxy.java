@@ -1,4 +1,5 @@
 package com.harry314.testMod.proxy;
 
-public class serverProxy {
+public class serverProxy extends commonProxy
+{
 }

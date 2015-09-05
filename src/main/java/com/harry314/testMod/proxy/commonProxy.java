@@ -1,5 +1,5 @@
 package com.harry314.testMod.proxy;
 
-public class commonProxy implements iProxy
+public abstract class commonProxy implements iProxy
 {
 }
