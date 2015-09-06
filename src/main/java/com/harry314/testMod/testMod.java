@@ -1,6 +1,6 @@
 package com.harry314.testMod;
 
-import com.harry314.testMod.configuration.configurationHandler;
+import com.harry314.testMod.handler.configurationHandler;
 import com.harry314.testMod.proxy.iProxy;
 import com.harry314.testMod.reference.reference;
 import cpw.mods.fml.common.Mod;
@@ -9,7 +9,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = reference.MOD_ID, name = reference.MOD_NAME, version = reference.VERSION)
+
+@Mod(modid = reference.MOD_ID, name = reference.MOD_NAME, version = reference.VERSION, guiFactory = reference.GUI_FACTORY_CLASS)
 public class testMod
 {
     @Mod.Instance(reference.MOD_ID)
