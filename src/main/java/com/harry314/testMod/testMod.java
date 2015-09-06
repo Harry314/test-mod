@@ -1,5 +1,6 @@
 package com.harry314.testMod;
 
+import com.harry314.testMod.configuration.configurationHandler;
 import com.harry314.testMod.proxy.iProxy;
 import com.harry314.testMod.reference.reference;
 import cpw.mods.fml.common.Mod;
@@ -14,13 +15,13 @@ public class testMod
     @Mod.Instance(reference.MOD_ID)
     public static testMod instance;
 
-    @SidedProxy(clientSide = "com.harry314.testMod.proxy.clientProxy",serverSide = "com.harry314.testMod.proxy.serverProxy")
+    @SidedProxy(clientSide = reference.CLIENT_PROXY_CLASS,serverSide = reference.SERVER_PROXY_CLASS)
     public static iProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        configurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
