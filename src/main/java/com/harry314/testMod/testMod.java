@@ -1,8 +1,11 @@
 package com.harry314.testMod;
 
 import com.harry314.testMod.handler.configurationHandler;
+import com.harry314.testMod.init.modItems;
 import com.harry314.testMod.proxy.iProxy;
 import com.harry314.testMod.reference.reference;
+import com.harry314.testMod.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -23,18 +26,21 @@ public class testMod
     public void preInit(FMLPreInitializationEvent event)
     {
         configurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new configurationHandler());
+        LogHelper.info("Pre Initialization Done!");
+        modItems.init();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-
+        LogHelper.info("Initialization Done!");
     }
 
     @Mod.EventHandler
     public void postinit(FMLPostInitializationEvent event)
     {
-
+        LogHelper.info("Post Initialization Done!");
     }
 
 }
